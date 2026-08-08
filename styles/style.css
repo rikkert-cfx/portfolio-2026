@@ -1,0 +1,601 @@
+/* -------------------------- */
+/*        BASIS STIJLEN       */
+/* -------------------------- */
+body {
+    margin: 0;
+    background: black;
+    font-family: Raleway, sans-serif;
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+/* -------------------------- */
+/*      NAVBAR & ICONEN       */
+/* -------------------------- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.navbar-left img {
+    height: 50px;
+}
+
+.navbar-right,
+.navbar-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar-icons div,
+.footer-icons div {
+    background-color: rgb(26,26,26);
+    padding: 7px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-icons img,
+.footer-icons img {
+    height: 20px;
+    filter: invert(1);
+    display: block;
+    transition: filter 0.2s ease;
+}
+
+.email-icon:hover { background-color: rgb(221,32,32); transform: scale(1.1); }
+.github-icon:hover { background-color: white; transform: scale(1.1); }
+.github-icon:hover img { filter: none; }
+.discord-icon:hover { background-color: rgb(63,145,192); transform: scale(1.1); }
+
+/* -------------------------- */
+/*   FLOATING CONTACT BUTTON  */
+/* -------------------------- */
+.floating-contact-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: transform 0.2s ease, background-color 0.2s;
+}
+
+.floating-contact-btn:hover {
+    transform: scale(1.05);
+    background-color: rgb(63,145,192);
+}
+
+.floating-contact-btn:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.floating-contact-btn img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    transition: filter 0.2s ease;
+}
+
+/* -------------------------- */
+/*           BODY-1           */
+/* -------------------------- */
+.body-1 {
+    position: relative;
+    min-height: 100vh;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='grid' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath d='M80 0 L0 0 0 80' fill='none' stroke='rgba(255,255,255,0.2)' stroke-width='1'/%3E%3C/pattern%3E%3CradialGradient id='fade' cx='50%25' cy='50%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='white' stop-opacity='1'/%3E%3Cstop offset='100%25' stop-color='white' stop-opacity='0'/%3E%3C/radialGradient%3E%3Cmask id='mask'%3E%3Crect width='100%25' height='100%25' fill='url(%23fade)'/%3E%3C/mask%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)' mask='url(%23mask)'/%3E%3C/svg%3E") center/cover no-repeat;
+}
+
+.body-1-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.body-1-title p,
+.body-1-title h1,
+.body-1-title h5 {
+    margin: 0.1em 0;
+}
+
+.body-1-title p { font-size: 0.75em; font-weight: 600; }
+.body-1-title h1 { font-size: 4em; font-weight: 600; }
+.body-1-title h5 { font-size: 1em; font-weight: 200; color: gray; }
+.body-1-title-blue { color: rgb(63,145,192); }
+
+/* -------------------------- */
+/*           BODY-2           */
+/* -------------------------- */
+.body-2 h1 {
+    color: white;
+    font-weight: 600;
+    font-size: 4em;
+    padding-left: 5%;
+    margin-bottom: 0;
+}
+
+.timeline {
+    margin-left: 10%;
+}
+
+.timelime-items {
+    border-left: 0.15em solid white;
+    padding-left: 2.5em;
+}
+
+.timeline-title,
+.timeline-item-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.timeline-title {
+    margin: 0 0 1.5em -1.5em;
+}
+
+.timeline-title img { height: 3em; }
+
+.timeline-title h3 {
+    color: white;
+    font-size: 3em;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1;
+    text-decoration: underline;
+}
+
+.timeline-item h2 {
+    color: white;
+    font-weight: 400;
+    font-size: 2em;
+    margin: 0;
+    line-height: 1;
+}
+
+.timeline-item-title img { height: 1.5em; }
+
+.timeline-item p {
+    color: rgb(179,178,178);
+    font-size: 1em;
+    font-weight: 300;
+    margin: 0.1em 0 3em;
+}
+
+.timeline-item img {
+    width: 30%;
+    margin-left: 2em;
+}
+
+.timeline-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+    padding-top: 0.5em;
+}
+
+.timeline-tags h4 {
+    background-color: rgb(26,26,26);
+    color: white;
+    padding: 0.4em 0.7em;
+    font-size: 0.7em;
+    font-weight: 400;
+    transform: rotate(1deg);
+    margin: 0;
+    transition: transform 0.4s ease;
+}
+
+.timeline-tags h4:hover {
+    transform: rotate(-1deg) scale(1.1);
+}
+
+/* -------------------------- */
+/*           BODY-3           */
+/* -------------------------- */
+.body-3 h3 {
+    color: white;
+    font-weight: 600;
+    font-size: 4em;
+    text-align: center;
+    padding-top: 3em;
+    margin-bottom: 0.25em;
+}
+
+.body-3 h5 { 
+    font-size: 1em; 
+    font-weight: 200; 
+    color: gray; 
+    margin: 0;
+    text-align: center;
+    padding-bottom: 5em;
+}
+
+.marquee-container {
+    width: 70%;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 20px 0;
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0));
+    mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0));
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee-scroll 100s linear infinite;
+    padding-right: 100%;
+}
+
+.marquee-content a {
+    text-decoration: none;
+}
+
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+
+.marquee-content img {
+    height: 60px;
+    width: auto;
+    margin: 0 40px;
+    vertical-align: middle;
+    transition: filter 0.3s ease-in-out;
+}
+
+.marquee-content img:hover {
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.8));
+}
+
+@keyframes marquee-scroll {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+
+/* -------------------------- */
+/*      MODAL (POP-UP)        */
+/* -------------------------- */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding-bottom: 3em;
+    box-sizing: border-box;
+}
+
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: rgb(26, 26, 26);
+    width: 90%;
+    height: 85%;
+    max-width: 1200px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+    overflow: hidden;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    border: 1px solid rgb(63,63,63);
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 2.5em;
+    font-weight: 300;
+    cursor: pointer;
+    z-index: 10;
+    line-height: 0.5;
+    background: rgba(0,0,0,0.5);
+    padding: 5px 10px 10px 10px;
+    border-radius: 5px;
+}
+
+.close-btn:hover {
+    color: rgb(221,32,32);
+    background: white;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* -------------------------- */
+/*           BODY-4           */
+/* -------------------------- */
+.body-4 h3 {
+    color: white;
+    font-weight: 600;
+    font-size: 4em;
+    text-align: center;
+    padding-top: 3em;
+    margin-bottom: 0.25em;
+}
+
+.body-4 h5 { 
+    font-size: 1em; 
+    font-weight: 200; 
+    color: gray; 
+    margin: 0;
+    text-align: center;
+    padding-bottom: 5em;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5em;
+}
+
+form input,
+form textarea {
+    background-color: black;
+    color: white;
+    border: none;
+    border-bottom: 2px solid gray;
+    width: 100%;
+    padding: 8px 0;
+    outline: none;
+}
+
+form input:focus,
+form textarea:focus {
+    border-bottom: 2px solid white;
+}
+
+.form-group label {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: gray;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: -16px;
+    font-size: 0.8em;
+    color: white;
+}
+
+form button {
+    background-color: rgb(26,26,26);
+    padding: 8px;
+    color: white;
+    border: none;
+    border-radius: 0.75em;
+    width: 100%;
+    transition: 0.3s ease all;
+}
+
+form button:hover {
+    background-color: white;
+    color: black;
+}
+
+form button:active {
+    transform: scale(0.95);
+}
+
+#success-message {
+    color: rgb(29,179,29);
+    text-align: center;
+    padding-top: 1em;
+}
+
+/* -------------------------- */
+/*           BODY-5           */
+/* -------------------------- */
+.body-5 {
+    margin-bottom: 3em;
+}
+
+.body-5 h1 {
+    color: white;
+    font-weight: 600;
+    font-size: 4em;
+    padding-left: 5%;
+    margin-bottom: 0;
+}
+
+.body-5 h5 {
+    font-size: 1em;
+    font-weight: 200;
+    color: gray;
+    padding-left: 5%;
+    margin: 0 0 3em;
+}
+
+/* -------------------------- */
+/*           FOOTER           */
+/* -------------------------- */
+footer {
+    color: white;
+    padding-top: 5em;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 10em;
+    padding-bottom: 0.5em;
+}
+
+footer h4 {
+    color: gray;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
+/* --------------------------------- */
+/*         RESPONSIVE TABLET         */
+/* --------------------------------- */
+@media (max-width: 1024px) {
+
+    nav {
+        padding: 15px 4%;
+    }
+
+    .body-1-title {
+        width: 90%;
+    }
+
+    .body-1-title h1 {
+        font-size: 3em;
+    }
+
+    .body-1-title h5 {
+        font-size: 0.9em;
+    }
+
+    .body-2 h1,
+    .body-3 h3,
+    .body-4 h3,
+    .body-5 h1 {
+        font-size: 3em;
+    }
+
+    .timeline {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .timeline-title h3 {
+        font-size: 2.2em;
+    }
+
+    .timeline-item h2 {
+        font-size: 1.6em;
+    }
+
+    .timeline-item p {
+        font-size: 0.95em;
+    }
+
+    .timeline-item img {
+        width: 60%;
+        margin-left: 0;
+        margin-top: 1em;
+    }
+
+    .marquee-container {
+        width: 90%;
+    }
+
+    .marquee-content img {
+        height: 50px;
+        margin: 0 25px;
+    }
+
+    .modal-content {
+        width: 95%;
+        height: 80%;
+    }
+
+    form {
+        width: 80%;
+        max-width: 500px;
+    }
+
+    .footer-logo {
+        width: 8em;
+    }
+}
+
+/* ----------------------------------- */
+/*         RESPONSIVE TELEFOON         */
+/* ----------------------------------- */
+@media (max-width: 576px) {
+    form {
+        width: 90%;
+        max-width: none;
+        margin: 0 auto;
+    }
+
+    .timeline {
+        margin-left: 5%;
+    }
+
+    .timeline-title {
+        margin-left: 0;
+        margin-bottom: 1em;
+    }
+
+    .timeline-title h3 {
+        font-size: 2em;
+    }
+
+    .timeline-item-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .timeline-item-title h2 {
+        font-size: 1.4em;
+        line-height: 1.2;
+        flex: 1;
+    }
+
+    .timeline-item-title img {
+        height: 1.2em;
+        flex-shrink: 0;
+        margin-left: 0;
+    }
+
+    .timeline-item img {
+        width: 80%;
+        margin-left: 0;
+        margin-top: 1em;
+    }
+    
+    .timelime-items {
+        padding-left: 1.5em;
+    }
+}
